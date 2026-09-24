@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.7) 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6) 0 2px, transparent 3px),
+        #fbd9df;
+
+    color: #8f4555;
+
+    font-family: "Cormorant Garamond", serif;
+
+    overflow-x: hidden;
+}
+
+
+/* Main page */
+
+.birthday-container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    position: relative;
+}
+
+
+/* Top heading */
+
+.little-heading {
+    background: rgba(255, 247, 239, 0.85);
+
+    padding: 10px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    color: #9b4c5d;
+
+    box-shadow: 0 5px 15px rgba(150, 70, 90, 0.1);
+
+    margin-bottom: 25px;
+}
+
+
+/* Main birthday heading */
+
+h1 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(65px, 9vw, 125px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    color: #a94f62;
+
+    text-shadow: 2px 3px rgba(255,255,255,0.5);
+}
+
+h1 span {
+    display: block;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    margin-top: 30px;
+
+    font-size: 21px;
+
+    letter-spacing: 7px;
+
+    color: #934b5a;
+}
+
+
+/* Bow */
+
+.bow {
+    font-size: 45px;
+
+    margin-top: 10px;
+
+    color: #b85b6e;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    gap: 80px;
+
+    margin-top: 30px;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.sticker-button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #8e4555;
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.sticker-button:hover {
+    transform: translateY(-8px) rotate(-2deg);
+}
+
+.sticker-button:active {
+    transform: scale(0.95);
+}
+
+
+/* Vintage envelope */
+
+.envelope {
+    width: 180px;
+
+    height: 115px;
+
+    background: #f8e5d2;
+
+    border: 4px solid #fff6eb;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    transform: rotate(-5deg);
+
+    box-shadow:
+        0 8px 18px rgba(100, 50, 60, 0.2),
+        inset 0 0 20px rgba(170, 100, 80, 0.12);
+}
+
+.envelope::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    border-left: 85px solid transparent;
+    border-right: 85px solid transparent;
+
+    border-bottom: 65px solid #eac8bd;
+}
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 86px solid transparent;
+    border-right: 86px solid transparent;
+    border-top: 62px solid #dbaaa8;
+
+    z-index: 2;
+}
+
+.envelope-heart {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 44px;
+    left: 75px;
+
+    font-size: 30px;
+
+    color: #b65469;
+}
+
+
+/* Camera */
+
+.camera {
+    width: 175px;
+
+    height: 110px;
+
+    background: #e8a9b4;
+
+    border: 5px solid #fff4ed;
+
+    border-radius: 25px;
+
+    position: relative;
+
+    transform: rotate(4deg);
+
+    box-shadow: 0 8px 18px rgba(100, 50, 60, 0.2);
+}
+
+.camera-top {
+    width: 55px;
+    height: 17px;
+
+    position: absolute;
+
+    top: -18px;
+    left: 25px;
+
+    background: #d994a1;
+
+    border-radius: 8px 8px 0 0;
+
+    border: 4px solid #fff4ed;
+}
+
+.camera-lens {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #f7d7d7;
+
+    border: 8px solid #fff0ea;
+
+    position: absolute;
+
+    left: 53px;
+    top: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-lens div {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #754c55;
+
+    border: 7px solid #d8a2ad;
+}
+
+.camera-flash {
+    width: 18px;
+    height: 18px;
+
+    background: #fff1c9;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    right: 20px;
+    top: 20px;
+}
+
+
+/* Bottom text */
+
+.bottom-text {
+    margin-top: 50px;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+}
+
+
+/* Flowers */
+
+.flower {
+    position: fixed;
+
+    font-size: 35px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    animation: floatFlower 5s ease-in-out infinite;
+}
+
+.flower1 {
+    top: 8%;
+    left: 5%;
+}
+
+.flower2 {
+    top: 18%;
+    right: 8%;
+}
+
+.flower3 {
+    bottom: 15%;
+    left: 8%;
+}
+
+.flower4 {
+    bottom: 8%;
+    right: 5%;
+}
+
+.flower5 {
+    top: 45%;
+    left: 2%;
+    font-size: 25px;
+}
+
+.flower6 {
+    top: 55%;
+    right: 3%;
+    font-size: 27px;
+}
+
+.flower7 {
+    top: 5%;
+    left: 45%;
+    font-size: 22px;
+}
+
+.flower8 {
+    bottom: 5%;
+    left: 45%;
+    font-size: 22px;
+}
+
+
+@keyframes floatFlower {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Hearts */
+
+.heart {
+    position: fixed;
+
+    font-size: 35px;
+
+    opacity: 0.45;
+
+    animation: floatingHeart 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+.heart1 {
+    top: 30%;
+    left: 18%;
+}
+
+.heart2 {
+    top: 70%;
+    right: 18%;
+}
+
+.heart3 {
+    top: 15%;
+    left: 75%;
+}
+
+.heart4 {
+    bottom: 20%;
+    left: 25%;
+}
+
+@keyframes floatingHeart {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+
+/* Popup background */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 100;
+
+    inset: 0;
+
+    background: rgba(69, 38, 45, 0.65);
+
+    backdrop-filter: blur(5px);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Letter */
+
+.letter-card {
+    background:
+        linear-gradient(rgba(255,248,235,0.97), rgba(255,241,224,0.97));
+
+    max-width: 650px;
+
+    width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 50px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(40, 20, 25, 0.35);
+
+    border: 5px solid #f8dfd0;
+
+    text-align: left;
+}
+
+.letter-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 110px;
+    height: 25px;
+
+    background: #e9b8ae;
+
+    opacity: 0.8;
+
+    transform-origin: center;
+}
+
+
+.letter-flower {
+    font-size: 45px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.dear {
+    font-size: 23px;
+
+    font-style: italic;
+}
+
+.letter-card h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin: 10px 0 20px;
+
+    color: #a44e60;
+}
+
+.letter-card p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.love {
+    text-align: right;
+
+    font-style: italic;
+
+    margin-top: 25px;
+}
+
+
+/* Video popup */
+
+.video-card {
+    width: min(850px, 95vw);
+
+    background: #ffe9e3;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(40, 20, 25, 0.4);
+}
+
+.video-card h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    color: #9e4d5d;
+}
+
+.video-card p {
+    font-size: 18px;
+
+    margin: 8px 0 20px;
+}
+
+video {
+    width: 100%;
+
+    max-height: 65vh;
+
+    border-radius: 12px;
+
+    background: #38292b;
+}
+
+
+/* Close button */
+
+.close-button {
+    position: absolute;
+
+    right: 18px;
+    top: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    color: #79414d;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .buttons {
+        gap: 30px;
+    }
+
+    .envelope,
+    .camera {
+        transform: scale(0.8);
+    }
+
+    .subtitle {
+        font-size: 15px;
+
+        letter-spacing: 4px;
+    }
+
+    .letter-card {
+        padding: 35px 25px;
+    }
+
+    .letter-card p {
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .buttons {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .little-heading {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+}

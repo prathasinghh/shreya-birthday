@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Shreya ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Decorative flowers -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌷</div>
+    <div class="flower flower3">🌸</div>
+    <div class="flower flower4">🌷</div>
+    <div class="flower flower5">🌸</div>
+    <div class="flower flower6">🌷</div>
+    <div class="flower flower7">🌸</div>
+    <div class="flower flower8">🌷</div>
+
+    <!-- Small floating hearts -->
+    <div class="heart heart1">♡</div>
+    <div class="heart heart2">♡</div>
+    <div class="heart heart3">♡</div>
+    <div class="heart heart4">♡</div>
+
+    <main class="birthday-container">
+
+        <p class="little-heading">♡ A LITTLE SOMETHING FOR YOU ♡</p>
+
+        <h1>
+            Happy Birthday
+            <span>Shreya</span>
+        </h1>
+
+        <p class="subtitle">
+            twenty looks so good on you ♡
+        </p>
+
+        <div class="bow">୨୧</div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button class="sticker-button" onclick="openLetter()">
+
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-heart">♡</div>
+                </div>
+
+                <span>Open Letter</span>
+
+            </button>
+
+
+            <button class="sticker-button" onclick="openVideo()">
+
+                <div class="camera">
+
+                    <div class="camera-top"></div>
+
+                    <div class="camera-lens">
+                        <div></div>
+                    </div>
+
+                    <div class="camera-flash"></div>
+
+                </div>
+
+                <span>Watch Video</span>
+
+            </button>
+
+        </div>
+
+        <p class="bottom-text">
+            made with lots of love ♡
+        </p>
+
+    </main>
+
+
+    <!-- LETTER POPUP -->
+
+    <div id="letterModal" class="modal">
+
+        <div class="letter-card">
+
+            <button class="close-button" onclick="closeLetter()">×</button>
+
+            <div class="letter-flower">🌷</div>
+
+            <p class="dear">Dear Shreya,</p>
+
+            <h2>Happy 20th Birthday! ✨</h2>
+
+            <p>
+                Happy 20th birthday to you! ♡
+            </p>
+
+            <p>
+                Twenty is such a beautiful age — a new chapter,
+                new memories, new adventures and so many exciting
+                things waiting for you.
+            </p>
+
+            <p>
+                I hope this year brings you endless happiness,
+                beautiful memories, amazing people and everything
+                your heart wishes for.
+            </p>
+
+            <p>
+                Never stop being the wonderful person you are.
+                Here's to growing, laughing, dreaming and making
+                the most of every little moment.
+            </p>
+
+            <p>
+                Here's to 20 and everything that comes with it! 🎀
+            </p>
+
+            <p class="love">
+                With lots of love ♡
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO POPUP -->
+
+    <div id="videoModal" class="modal">
+
+        <div class="video-card">
+
+            <button class="close-button" onclick="closeVideo()">×</button>
+
+            <h2>A Little Video For You ♡</h2>
+
+            <p>Some memories just deserve their own little movie.</p>
+
+            <video id="birthdayVideo" controls>
+
+                <!--
+                Put your video file inside the "video" folder
+                and name it birthday.mp4
+                -->
+
+                <source src="video/birthday.mp4" type="video/mp4">
+
+
+            </video>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
